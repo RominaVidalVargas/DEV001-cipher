@@ -1,8 +1,8 @@
-# Cifrado César
+# Cifrado César "Tu Secreto"
+
 ## Prototipo
-(img/Prototipo.jpg)
+![caeser-cipher](img/Prototipo.jpg)
 ## Presentación
-Tu Secreto
 Página dirigida a la comunidad LGTBQ+, que aún no han querido o podido vivir su orientación sexual libremente 
 "NO HAN SALIDO DEL CLOSET".
 Pudiendo enviar mensajes, cartas, diario de vida,etc. Sin el riesgo de ser leido por alguien indevido. 
