@@ -1,26 +1,18 @@
 import cipher from './cipher.js';
 
-/*mayusculas automaticas*/
- /*  document.getElementById("mensaje").addEventListener("keyup", function(){
-    mensaje.value = mensaje.value.toUpperCase();
-  }); */
+/*mayusculas automaticas mensaje 1*/
+  let texto = document.getElementById("mensaje").addEventListener("keyup", function(){
+    this.value = this.value.toUpperCase();
+  });
   document.getElementById("cifrar").addEventListener("click", function(){
-    let texto = document.getElementById("mensaje").value;
+    texto = document.getElementById("mensaje").value;
     let offset = document.getElementById("offset").value;
-    document.getElementById("mensaje2").value = cipher.encode(texto.toUpperCase(), offset);
+    /*mayusculas automaticas mensaje2*/
+    document.getElementById("mensaje2").value = cipher.encode(offset, texto.toUpperCase());
   });
   document.getElementById("descifrar").addEventListener("click", function(){
     let texto = document.getElementById("mensaje").value;
     let offset = document.getElementById("offset").value;
-    document.getElementById("mensaje2").value = cipher.decode(texto.toUpperCase(), offset);
+    document.getElementById("mensaje2").value = cipher.decode(offset, texto.toUpperCase());
   });
 
-  /*cifrar*/
-  /* descifrar */
-  /* function cifrar2 (texto, offset){
-    if (!texto)
-      return ""
-    const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    offset = (offset % 26 + 26) % 26;
-    return texto.replace(/[A-Z]/ig, c=> letras[(letras.indexOf(c)+offset)%26]);
-  } */

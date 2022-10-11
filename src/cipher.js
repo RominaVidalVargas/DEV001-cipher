@@ -1,5 +1,6 @@
 const cipher = {
-  encode:(texto, offset)=>{
+  /*codificar*/
+  encode:(offset, texto)=>{
     let resultado = "";
     const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     offset = (offset % 26 + 26) % 26;
@@ -14,9 +15,9 @@ const cipher = {
       }
     }
     return resultado;
-  
 },
-decode:(texto, offset)=>{
+/*decodificar*/
+decode:(offset, texto)=>{
     if (!texto)
       return "";
     const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -24,5 +25,4 @@ decode:(texto, offset)=>{
     return texto.replace(/[A-Z]/ig, c=> letras[(letras.indexOf(c)-offset)%26]);
   }
   }
-  
   export default cipher;
